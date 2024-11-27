@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjokd2fubiwaa"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_cppjl"]
+[ext_resource type="PackedScene" uid="uid://bg3obtr6x0trs" path="res://Dot.tscn" id="2_k3t7b"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cppjl")
+DotScene = ExtResource("2_k3t7b")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PolygonsContainer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="InitialPolygon" type="Polygon2D" parent="PolygonsContainer"]
+unique_name_in_owner = true
+polygon = PackedVector2Array(418, -301, 466, 262, -517, 273, -459, -69, -100, -7, -125, -111, -561, -186, -511, -308)
+
+[node name="CarvingCursor" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+color = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-27, -10, 1, -27, 29, -6, 15, 25, -23, 23)
